@@ -3,7 +3,7 @@
 // See the file license.txt for copying permission.
 
 use num::BigInt;
-use table::{Table, Row};
+use crate::table::{Table, Row};
 
 use num::bigint::ToBigInt;
 use num::integer::Integer;

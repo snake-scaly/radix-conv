@@ -13,7 +13,6 @@ use std::{env, path};
 use num::BigInt;
 use convtable::ConvTable;
 
-use std::error::Error;
 use num::traits::Num;
 
 fn main() {
@@ -39,7 +38,7 @@ fn main() {
 
         match BigInt::from_str_radix(&v, radix) {
             Ok(x) => table.push_result(&arg, &x),
-            Err(e) => table.push_error(&arg, e.description()),
+            Err(e) => table.push_error(&arg, &e.to_string()),
         };
     }
 
